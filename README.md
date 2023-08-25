@@ -1,7 +1,7 @@
 Регистрация пользователя
 ![Регистрация пользователя](https://github.com/anikeev717/api/blob/main/2023-08-25%20033819.png)
 Логин
-![Логин](https://github.com/anikeev717/api/commit/a9cf68b82134ac55a7589dcb7e2497b498378f00)
+![Логин](https://github.com/anikeev717/api/blob/main/2023-08-25%20033833.png)
 Обновление данных
 ![Обновление данных](https://github.com/anikeev717/api/blob/main/2023-08-25%20033845.png)
 Просмотр данных пользователя
