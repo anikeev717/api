@@ -1,0 +1,230 @@
+{
+  "info": {
+    "_postman_id": "6e8d39ef-8917-4ccd-b993-8ecefb9448ca",
+    "name": "Kata Academy API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "29334892"
+  },
+  "item": [
+    {
+      "name": "User Registration",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user\": {\r\n    \"username\": \"fullName\",\r\n    \"email\": \"email@e.mail\",\r\n    \"password\": \"password\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://blog.kata.academy/api/users"
+      },
+      "response": [
+        {
+          "user": {
+            "username": "fullname",
+            "email": "email@e.mail",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDQ3MTYsImlhdCI6MTY5MjkyMDcxNn0.VkVkItNn6CG0dkZLb5CWRWghHlzZZK4-YwXRnUUJEXY"
+          }
+        }
+      ]
+    },
+    {
+      "name": "User Login",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDQ3MTYsImlhdCI6MTY5MjkyMDcxNn0.VkVkItNn6CG0dkZLb5CWRWghHlzZZK4-YwXRnUUJEXY"
+          }
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user\": {\r\n    \"email\": \"email@e.mail\",\r\n    \"password\": \"password\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://blog.kata.academy/api/users/login"
+      },
+      "response": [
+        {
+          "user": {
+            "username": "fullname",
+            "email": "email@e.mail",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDQ3ODIsImlhdCI6MTY5MjkyMDc4Mn0.lfeFKBKlUq_9Mo0GQngjPPwnM37xaGwLDAhuFRY4tOU"
+          }
+        }
+      ]
+    },
+    {
+      "name": "User Update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDQ3MTYsImlhdCI6MTY5MjkyMDcxNn0.VkVkItNn6CG0dkZLb5CWRWghHlzZZK4-YwXRnUUJEXY"
+          }
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user\": {\r\n    \"bio\": \"Go\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://blog.kata.academy/api/user"
+      },
+      "response": [
+        {
+          "user": {
+            "username": "fullname",
+            "email": "email@e.mail",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDUwNzQsImlhdCI6MTY5MjkyMTA3NH0.c1pKZwOMNKJbZ9hMPDFO2VxyBpnG7qlylBx8m10bLqU",
+            "bio": "Go"
+          }
+        }
+      ]
+    },
+    {
+      "name": "User Get",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDQ3MTYsImlhdCI6MTY5MjkyMDcxNn0.VkVkItNn6CG0dkZLb5CWRWghHlzZZK4-YwXRnUUJEXY"
+          }
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://blog.kata.academy/api/user"
+      },
+      "response": [
+        {
+          "user": {
+            "username": "fullname",
+            "email": "email@e.mail",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDU4OTUsImlhdCI6MTY5MjkyMTg5NX0.u8EFjmdfEOxFGbdEPFQV6M8-QQk88EVU4SdMBdhyOX0",
+            "bio": "Go"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Profile Get",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://blog.kata.academy/api/profiles/jake"
+      },
+      "response": [
+        {
+          "profile": {
+            "username": "jake",
+            "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+            "following": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "Profile Follow",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDQ3MTYsImlhdCI6MTY5MjkyMDcxNn0.VkVkItNn6CG0dkZLb5CWRWghHlzZZK4-YwXRnUUJEXY"
+          }
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://blog.kata.academy/api/profiles/jake/follow"
+      },
+      "response": [
+        {
+          "profile": {
+            "username": "jake",
+            "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+            "following": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Profile Unfollow",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTdlYjhjYzMxZGUxMWIwMGJjY2JjOSIsInVzZXJuYW1lIjoiZnVsbG5hbWUiLCJleHAiOjE2OTgxMDQ3MTYsImlhdCI6MTY5MjkyMDcxNn0.VkVkItNn6CG0dkZLb5CWRWghHlzZZK4-YwXRnUUJEXY"
+          }
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://blog.kata.academy/api/profiles/jake/follow"
+      },
+      "response": [
+        {
+          "profile": {
+            "username": "jake",
+            "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+            "following": false
+          }
+        }
+      ]
+    }
+  ]
+}
